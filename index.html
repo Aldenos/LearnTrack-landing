@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Copitocorp - La plataforma que facilita el seguimiento del aprendizaje de tus estudiantes." />
   <title>Copitocorp - Seguimiento del Aprendizaje</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +14,7 @@
   <!-- ========== NAVBAR ========== -->
   <header id="navbar">
     <div class="container nav-inner">
-      <a href="#inicio" class="logo" id="logo-link">Copitocorp</a>
+      <a href="#inicio" class="logo">Copitocorp</a>
       <nav id="main-nav">
         <ul class="nav-links">
           <li><a href="#inicio"      class="nav-link" id="nav-inicio">Inicio</a></li>
@@ -32,6 +31,16 @@
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
+      <div class="mode-switcher" id="mode-switcher">
+        <button class="mode-btn" id="mode-btn" aria-haspopup="true" aria-expanded="false">
+          <span id="mode-label">Docente</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mode-dropdown" id="mode-dropdown">
+          <button class="mode-opt active" data-mode="docente">Docente</button>
+          <button class="mode-opt" data-mode="estudiante">Estudiante</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -40,23 +49,14 @@
     <div class="container hero-inner">
       <div class="hero-image-wrap">
         <div class="hero-circle-frame">
-          <img src="images/hero_woman.png" alt="Docente Copitocorp" class="hero-photo" />
+          <img src="images/hero_woman.png" alt="Docente Copitocorp" class="hero-photo d-img" />
+          <img src="images/hero.png"       alt="Estudiante Copitocorp" class="hero-photo e-img" />
         </div>
       </div>
       <div class="hero-text">
         <h1>Haz visible el progreso académico durante el curso</h1>
         <p class="hero-subtitle">La plataforma que facilita el seguimiento del aprendizaje</p>
         <p class="hero-desc">Explora el desempeño de los estudiantes de forma clara y ordenada. Visualiza resultados, identifica temas que requieren refuerzo y comprende mejor el progreso académico durante el curso.</p>
-        <div class="hero-btns">
-          <a href="https://play.google.com" target="_blank" class="store-btn" id="btn-google">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76a2 2 0 0 0 2.07-.21l12.76-7.37-3.56-3.56-11.27 11.14zM.5 1.1A2 2 0 0 0 0 2.5v19a2 2 0 0 0 .5 1.4L.6 23l10.64-10.64v-.25L.6 1.1H.5zM20.32 10.5l-2.8-1.62-3.93 3.93 3.93 3.93 2.82-1.63a2 2 0 0 0 0-4.61zM5.25.45 18.01 7.82l-3.56 3.56L3.18.24A2 2 0 0 1 5.25.45z"/></svg>
-            <div><small>GET IT ON</small><strong>Google Play</strong></div>
-          </a>
-          <a href="https://apple.com/app-store" target="_blank" class="store-btn" id="btn-apple">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.18 1.27-2.16 3.8.03 3.02 2.65 4.03 2.68 4.04l-.07.28zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <div><small>Download on the</small><strong>App Store</strong></div>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -66,47 +66,41 @@
     <div class="container">
       <h2 class="section-title">Nuestros Beneficios</h2>
       <div class="benefits-grid">
-
-        <div class="benefit-item" id="benefit-1">
+        <div class="benefit-item">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.5a2 2 0 0 1 0 3"/><path d="M19 6.5a4 4 0 0 1 0 6"/></svg>
           </div>
           <h3>Desempeño por tema</h3>
           <p>Permite identificar rápidamente qué contenidos requieren mayor refuerzo durante el curso.</p>
         </div>
-
-        <div class="benefit-item" id="benefit-2">
+        <div class="benefit-item">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
           </div>
           <h3>Seguimiento del progreso</h3>
           <p>Ayuda a visualizar el avance académico del estudiante de forma continua.</p>
         </div>
-
-        <div class="benefit-item" id="benefit-3">
+        <div class="benefit-item">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Apoyo para docentes</h3>
           <p>Facilita la toma de decisiones pedagógicas a partir de resultados claros.</p>
         </div>
-
-        <div class="benefit-item" id="benefit-4">
+        <div class="benefit-item">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/><line x1="20" y1="8" x2="20" y2="14"/></svg>
           </div>
           <h3>Apoyo para estudiantes</h3>
           <p>Permite reconocer fortalezas y aspectos que necesitan mejorar.</p>
         </div>
-
-        <div class="benefit-item" id="benefit-5">
+        <div class="benefit-item">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <h3>Usabilidad amigable</h3>
           <p>Interfaz intuitiva, diseñada para ser fácil de usar en cualquier dispositivo.</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -115,103 +109,139 @@
   <section id="testimonios" class="testimonials">
     <div class="container">
       <p class="section-label">Testimonios</p>
-      <h2 class="section-title left">Lo que opinan nuestros usuarios</h2>
-      <div class="testimonial-grid">
+      <h2 class="section-title">Lo que opinan nuestros usuarios</h2>
 
-        <div class="testimonial-card" id="test-1">
-          <div class="testimonial-author">
-            <strong>María G.</strong>
-            <span>Docente de Algoritmos</span>
+      <div class="d-only">
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-author">
+              <strong>María G.</strong>
+              <span>Docente de Algoritmos</span>
+            </div>
+            <p>"La plataforma me permite ver claramente el rendimiento de mis estudiantes. Ahora puedo identificar rápidamente qué temas necesitan refuerzo."</p>
           </div>
-          <p>"La plataforma me permite ver claramente el rendimiento de mis estudiantes. Ahora puedo identificar rápidamente qué temas necesitan refuerzo."</p>
-        </div>
-
-        <div class="testimonial-card" id="test-2">
-          <div class="testimonial-author">
-            <strong>Luis P.</strong>
-            <span>Docente de Introducción a los algoritmos</span>
+          <div class="testimonial-card">
+            <div class="testimonial-author">
+              <strong>Luis P.</strong>
+              <span>Docente de Introducción a los algoritmos</span>
+            </div>
+            <p>"Antes revisaba los resultados de forma general, pero ahora puedo detectar patrones y apoyar a los estudiantes que más lo necesitan."</p>
           </div>
-          <p>"Antes revisaba los resultados de forma general, pero ahora puedo detectar patrones y apoyar a los estudiantes que más lo necesitan."</p>
-        </div>
-
-        <div class="testimonial-card" id="test-3">
-          <div class="testimonial-author">
-            <strong>Ana R.</strong>
-            <span>Docente de Data Science</span>
+          <div class="testimonial-card">
+            <div class="testimonial-author">
+              <strong>Ana R.</strong>
+              <span>Docente de Data Science</span>
+            </div>
+            <p>"Me ayuda a tomar decisiones durante el curso, ya que puedo ver en qué están fallando mis estudiantes sin tener que revisar todo manualmente."</p>
           </div>
-          <p>"Me ayuda a tomar decisiones durante el curso, ya que puedo ver en qué están fallando mis estudiantes sin tener que revisar todo manualmente."</p>
         </div>
+      </div>
 
+      <div class="e-only">
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-author">
+              <strong>Carmen G.</strong>
+              <span>Estudiante de ciencias de la computación</span>
+            </div>
+            <p>"Me ayudó a entender en qué temas estoy fallando. Ahora sé exactamente qué debo reforzar para mejorar."</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-author">
+              <strong>Fernando P.</strong>
+              <span>Estudiante de Ingeniería de software</span>
+            </div>
+            <p>"Me ha ayudado a reducir el tiempo que le dedico a buscar en qué temas debo esforzarme más."</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-author">
+              <strong>Juan R.</strong>
+              <span>Estudiante de Ingeniería de sistemas</span>
+            </div>
+            <p>"Ahora tengo más tiempo para estudiar, pues ya no gasto tiempo en anotar mi plan de estudio."</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ========== DEMO ========== -->
-  <section id="demo" class="demo">
-    <div class="container">
-      <h2 class="section-title">Conoce nuestra aplicación en acción</h2>
-      <div class="video-wrapper" id="video-demo">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Copitocorp Demo" allowfullscreen loading="lazy"></iframe>
-      </div>
+<section id="demo" class="demo">
+  <div class="container">
+    <p class="section-label">Video Demo</p>
+    <h2 class="section-title">Observa nuestra aplicación en acción</h2>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/utq5IXa2U0s" 
+        title="Copitocorp Demo" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ========== PRICING ========== -->
   <section id="precios" class="pricing">
-    <div class="pricing-layout">
-      <div class="pricing-left">
-        <p class="pricing-eyebrow">Precios</p>
-        <h2 class="pricing-title">Nuestros planes</h2>
-        <p class="pricing-desc">Elige el plan que mejor se adapte a ti y comienza a mejorar la experiencia de aprendizaje.</p>
-      </div>
-      <div class="pricing-cards">
 
-        <div class="pricing-card card-border-bottom" id="plan-gratuita">
-          <div class="plan-tag">GRATUITA</div>
-          <div class="plan-price">S/ <span class="price-num">0</span><span class="price-period">/mes</span></div>
-          <ul class="plan-features">
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Dashboard con métricas básicas
-            </li>
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Desempeño por tema
-            </li>
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Identificación de estudiantes con bajo rendimiento
-            </li>
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Resultados de actividades
-            </li>
-          </ul>
-          <a href="#contacto" class="btn-plan-navy" id="btn-plan-free">Probar ahora</a>
+    <div class="d-only">
+      <div class="pricing-layout">
+        <div class="pricing-left">
+          <p class="pricing-eyebrow">Precios</p>
+          <h2 class="pricing-title">Nuestros planes</h2>
+          <p class="pricing-desc">Elige el plan que mejor se adapte a ti y comienza a mejorar la experiencia de aprendizaje.</p>
         </div>
-
-        <div class="pricing-card" id="plan-pro">
-          <div class="plan-tag">PRO</div>
-          <div class="plan-price">S/ <span class="price-num">20</span><span class="price-period">/mes</span></div>
-          <ul class="plan-features">
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Hacer preguntas sobre un estudiante
-            </li>
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Subir PDFs y generar preguntas automáticamente
-            </li>
-            <li>
-              <svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Recibir recomendaciones de mejora
-            </li>
-          </ul>
-          <a href="#contacto" class="btn-plan-navy btn-plan-inline" id="btn-plan-pro">Comprar</a>
+        <div class="pricing-cards">
+          <div class="pricing-card card-border-bottom">
+            <div class="plan-tag">GRATUITA</div>
+            <div class="plan-price">S/ <span class="price-num">0</span><span class="price-period">/mes</span></div>
+            <ul class="plan-features">
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dashboard con métricas</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Desempeño por tema</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Organizar temas por grupo</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Visualizar el progreso de estudiantes</li>
+            </ul>
+            <a href="#contacto" class="btn-plan-navy">Probar ahora</a>
+          </div>
+          <div class="pricing-card">
+            <div class="plan-tag">PRO</div>
+            <div class="plan-price">S/ <span class="price-num">20</span><span class="price-period">/mes</span></div>
+            <ul class="plan-features">
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Generación de actividades con IA</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Edición de preguntas y respuestas generadas por IA</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Recibir recomendaciones de mejora</li>
+            </ul>
+            <a href="#contacto" class="btn-plan-navy btn-plan-inline">Comprar</a>
+          </div>
         </div>
-
       </div>
     </div>
+
+    <div class="e-only">
+      <div class="pricing-layout">
+        <div class="pricing-left">
+          <p class="pricing-eyebrow">Precios</p>
+          <h2 class="pricing-title">Plan gratuito<br><span class="pricing-accent">para estudiantes</span></h2>
+          <p class="pricing-desc">Accede a las herramientas principales de la plataforma y mejora tu seguimiento académico de forma sencilla.</p>
+          <div class="pricing-rule"></div>
+        </div>
+        <div class="pricing-cards single-plan">
+          <div class="pricing-card">
+            <div class="plan-tag">GRATUITO</div>
+            <div class="plan-price">S/ <span class="price-num">0</span><span class="price-period">/mes</span></div>
+            <ul class="plan-features">
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ver el progreso de tus cursos</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Consultar tus notas</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Revisar resultados de actividades</li>
+              <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8 12 11 15 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Recibir recomendaciones de mejora</li>
+            </ul>
+            <a href="#contacto" class="btn-plan-accent">Probar ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ========== ABOUT ========== -->
@@ -219,9 +249,15 @@
     <div class="about-inner">
       <div class="about-text">
         <p class="section-label left-align">Acerca de</p>
-        <h2 class="about-title">Somos Copitocorp, apoyar a docentes el seguimiento del aprendizaje de sus estudiantes</h2>
-        <p class="about-desc">Estamos comprometidos en brindar soluciones claras y accesibles que les permitan identificar dificultades a tiempo, tomar decisiones pedagógicas informadas y mejorar el rendimiento académico de sus clases de manera continua y efectiva.</p>
-        <a href="#contacto" class="btn-primary" id="btn-about-cta">Contáctanos</a>
+        <div class="d-only">
+          <h2 class="about-title">Somos Copitocorp, apoyar a docentes el seguimiento del aprendizaje de sus estudiantes</h2>
+          <p class="about-desc">Estamos comprometidos en brindar soluciones claras y accesibles que les permitan identificar dificultades a tiempo, tomar decisiones pedagógicas informadas y mejorar el rendimiento académico de sus clases de manera continua y efectiva.</p>
+        </div>
+        <div class="e-only">
+          <h2 class="about-title">Somos Copitocorp, apoyar a agilizar el proceso de aprendizaje de los estudiantes</h2>
+          <p class="about-desc">Estamos comprometidos en brindar soluciones claras y accesibles que les permitan identificar dificultades y reducir el tiempo en ver sus fallos académicos.</p>
+        </div>
+        <a href="#contacto" class="btn-primary">Contáctanos</a>
       </div>
       <div class="about-image">
         <img src="images/team.png" alt="Equipo Copitocorp" />
@@ -236,7 +272,7 @@
       <h2 class="section-title">El equipo</h2>
       <div class="team-grid">
 
-        <div class="team-member" id="team-aldo">
+        <div class="team-member">
           <div class="team-avatar">
             <img src="images/aldo.png" alt="Aldo Zavala" />
           </div>
@@ -244,7 +280,7 @@
           <span class="team-role">Ciencias de la Computación</span>
         </div>
 
-        <div class="team-member" id="team-valentina">
+        <div class="team-member">
           <div class="team-avatar">
             <img src="images/valentina.png" alt="Valentina Montenegro" />
           </div>
@@ -252,7 +288,7 @@
           <span class="team-role">Ciencias de la Computación</span>
         </div>
 
-        <div class="team-member" id="team-leicy">
+        <div class="team-member">
           <div class="team-avatar">
             <img src="images/leicy.png" alt="Leicy Cahuana" />
           </div>
@@ -260,11 +296,19 @@
           <span class="team-role">Ciencias de la Computación</span>
         </div>
 
-        <div class="team-member" id="team-anabella">
+        <div class="team-member">
           <div class="team-avatar">
             <img src="images/anabella.png" alt="Anabella Huamán" />
           </div>
           <p class="team-name">Anabella Huamán</p>
+          <span class="team-role">Ciencias de la Computación</span>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">
+            <img src="images/alex.png" alt="Alex Fong Saravia" />
+          </div>
+          <p class="team-name">Alex Fong Saravia</p>
           <span class="team-role">Ciencias de la Computación</span>
         </div>
 
@@ -277,49 +321,77 @@
     <div class="container">
       <p class="section-label">FAQ</p>
       <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-list" id="faq-list">
 
-        <div class="faq-item" id="faq-1">
+      <div class="faq-list d-only" id="faq-docente">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Qué es Copitocorp?</button>
           <div class="faq-answer"><p>Copitocorp es una plataforma educativa que facilita el seguimiento del aprendizaje de los estudiantes, permitiendo a los docentes identificar dificultades y tomar decisiones pedagógicas informadas.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-2">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Cómo puedo empezar a usar la plataforma?</button>
           <div class="faq-answer"><p>Para poder usar la cuenta debe crear su cuenta y podrá utilizar la versión gratuita.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-3">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Necesito conocimientos técnicos para usarla?</button>
           <div class="faq-answer"><p>No. Copitocorp está diseñada para ser intuitiva y fácil de usar. Cualquier docente puede comenzar a utilizarla sin necesidad de conocimientos técnicos previos.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-4">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Cómo me ayuda a mejorar el rendimiento de mis estudiantes?</button>
           <div class="faq-answer"><p>La plataforma te muestra métricas detalladas de desempeño por tema, identifica a los estudiantes con bajo rendimiento y te brinda recomendaciones pedagógicas personalizadas.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-5">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Qué tipo de información puedo ver sobre mis estudiantes?</button>
           <div class="faq-answer"><p>Puedes ver el desempeño por tema, resultados de actividades, identificación de estudiantes con bajo rendimiento y el progreso académico continuo de cada estudiante.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-6">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Esto me ahorrará tiempo en la revisión de actividades?</button>
           <div class="faq-answer"><p>Sí. Copitocorp automatiza el análisis de resultados, lo que te permite obtener insights en segundos en lugar de revisar manualmente cada actividad.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-7">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Cómo funciona la herramienta de análisis inteligente?</button>
           <div class="faq-answer"><p>La herramienta analiza los resultados de actividades y exámenes para detectar patrones, identificar temas con mayor dificultad y generar recomendaciones automáticas de mejora.</p></div>
         </div>
-
-        <div class="faq-item" id="faq-8">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">¿Los estudiantes también pueden ver su progreso?</button>
           <div class="faq-answer"><p>Sí, los estudiantes también tienen acceso a una vista de su propio progreso académico, permitiéndoles identificar sus fortalezas y áreas de mejora.</p></div>
         </div>
-
       </div>
+
+      <div class="faq-list e-only" id="faq-estudiante">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Qué es Copitocorp?</button>
+          <div class="faq-answer"><p>Copitocorp es una plataforma educativa que te permite seguir tu progreso académico, identificar tus fortalezas y áreas de mejora durante tus cursos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Cómo puedo empezar a usar la plataforma?</button>
+          <div class="faq-answer"><p>Para poder usar la cuenta debe crear su cuenta y podrá utilizar la versión gratuita.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Necesito conocimientos técnicos para usarla?</button>
+          <div class="faq-answer"><p>No. La plataforma está diseñada para ser intuitiva y fácil de usar. Cualquier estudiante puede comenzar a utilizarla sin conocimientos técnicos previos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Cómo me ayuda a mejorar mi rendimiento como estudiante?</button>
+          <div class="faq-answer"><p>La plataforma te muestra tu desempeño por tema, resultados de actividades y te brinda recomendaciones personalizadas para enfocarte en donde más lo necesitas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Qué tipo de información puedo ver en mi inicio?</button>
+          <div class="faq-answer"><p>Puedes ver el progreso de tus cursos, tus notas, los resultados de actividades y recomendaciones de mejora personalizadas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Esto me ahorrará tiempo al ver en qué temas fallo?</button>
+          <div class="faq-answer"><p>Sí. Copitocorp analiza automáticamente tus resultados y te muestra claramente en qué temas necesitas más práctica, ahorrándote tiempo de análisis manual.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Cómo funciona la herramienta de análisis inteligente?</button>
+          <div class="faq-answer"><p>La herramienta analiza tus resultados para detectar patrones, identificar los temas donde tienes más dificultad y sugerir áreas de enfoque para mejorar.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">¿Puedo ver mi progreso?</button>
+          <div class="faq-answer"><p>Sí, tienes acceso a una vista de tu propio progreso académico donde puedes ver tus avances y áreas de oportunidad en tiempo real.</p></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -330,16 +402,16 @@
       <h2 class="section-title">¿Tienes Preguntas? ¡Estamos Aquí para Ayudarte!</h2>
       <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <input type="text"  id="name"    name="name"    placeholder="Nombres"  required />
-          <input type="email" id="email"   name="email"   placeholder="Correo"   required />
+          <input type="text"  name="name"    placeholder="Nombres"  required />
+          <input type="email" name="email"   placeholder="Correo"   required />
         </div>
         <div class="form-row">
-          <input type="tel"   id="phone"   name="phone"   placeholder="Teléfono" />
-          <input type="text"  id="subject" name="subject" placeholder="Asunto"   required />
+          <input type="tel"   name="phone"   placeholder="Teléfono" />
+          <input type="text"  name="subject" placeholder="Asunto"   required />
         </div>
-        <textarea id="message" name="message" placeholder="Escribe un mensaje" rows="6" required></textarea>
+        <textarea name="message" placeholder="Escribe un mensaje" rows="6" required></textarea>
         <button type="submit" class="btn-contact-submit" id="btn-submit">Envía un mensaje</button>
-        <p class="form-success" id="form-success">✅ ¡Mensaje enviado! Te contactaremos pronto.</p>
+        <p class="form-success" id="form-success">¡Mensaje enviado! Te contactaremos pronto.</p>
       </form>
     </div>
   </section>
@@ -349,34 +421,48 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#inicio" class="footer-logo">Copitocorp</a>
-        <p>La plataforma que facilita el seguimiento del aprendizaje de tus estudiantes.</p>
-        <div class="footer-socials">
-          <a href="#" id="social-fb"  aria-label="Facebook"  class="social-circle">f</a>
-          <a href="#" id="social-ig"  aria-label="Instagram" class="social-circle">ig</a>
-          <a href="#" id="social-tw"  aria-label="Twitter"   class="social-circle">tw</a>
-        </div>
+        <p class="footer-sub-name">LearnTrack</p>
+        <p>Transformando la educación con analítica inteligente e IA.</p>
       </div>
       <div class="footer-col">
-        <h4>Plataforma</h4>
+        <h4>Nosotros</h4>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#beneficios">Beneficios</a></li>
-          <li><a href="#precios">Precios</a></li>
           <li><a href="#acerca">Acerca de</a></li>
+          <li><a href="#equipo">Nuestro Equipo</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Soporte</h4>
+        <h4>LearnTrack</h4>
         <ul>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contacto">Contáctanos</a></li>
-          <li><a href="#">Términos de uso</a></li>
-          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Actividades de Aprendizaje</a></li>
+          <li><a href="#">Ruta de Aprendizaje</a></li>
+          <li><a href="#">Comunidad Interactiva</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <ul>
+          <li><a href="#contacto">Formulario contáctanos</a></li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l1.27-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            955 081 324
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            infoCopitocorp@gmail.com
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Av. Primavera - Monterrico
+          </li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 Copitocorp. Todos los derechos reservados.</p>
+      <p>© Copitocorp 2026</p>
     </div>
   </footer>
 
